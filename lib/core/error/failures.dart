@@ -7,7 +7,24 @@ import 'package:equatable/equatable.dart';
 
   @override
   // TODO: implement props
-  List<Object?> get props ;
+  List<Object?> get props;
 
 
+}
+class ServerFailure extends Failure {
+  const ServerFailure({required List properties}) : super(properties: properties);
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => throw UnimplementedError();
+
+  
+}
+
+class CacheFailure extends Failure {
+  const CacheFailure({required List properties}) : super(properties: properties);
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => throw UnimplementedError();
 }
