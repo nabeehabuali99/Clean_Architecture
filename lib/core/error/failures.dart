@@ -21,10 +21,10 @@ class ServerFailure extends Failure {
 }
 
 class CacheFailure extends Failure {
-  const CacheFailure({required List properties})
-      : super(properties: properties);
+  const CacheFailure({required List properties}) : super(properties: properties);
 
   @override
   // TODO: implement props
   List<Object?> get props => throw UnimplementedError();
+
 }
