@@ -4,7 +4,7 @@ abstract class NetworkInfo{
   Future<bool> get isConnected;
 }
 
-class NetworkInfoImpl implements NetworkInfo{
+class NetworkInfoImplementation implements NetworkInfo{
   late final InternetConnectionChecker connectionChecker;
   @override
   // TODO: implement isConnected

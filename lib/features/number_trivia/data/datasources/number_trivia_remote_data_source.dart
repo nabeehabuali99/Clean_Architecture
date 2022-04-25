@@ -1,6 +1,5 @@
 import 'dart:convert';
-import 'dart:io';
-
+ 
 import 'package:clean_architecture/core/error/exceptions.dart';
 import 'package:clean_architecture/features/number_trivia/data/models/number_trivia_model.dart';
 import 'package:http/http.dart' as http;
@@ -11,10 +10,10 @@ abstract class NumberTriviaRemoteDataSource {
   Future<NumberTriviaModel> getRandomNumberTrivia();
 }
 
-class NumberTriviaRemoteDataSourceImpl implements NumberTriviaRemoteDataSource {
+class NumberTriviaRemoteDataSourceImplementation implements NumberTriviaRemoteDataSource {
   final http.Client client;
 
-  NumberTriviaRemoteDataSourceImpl({required this.client});
+  NumberTriviaRemoteDataSourceImplementation({required this.client});
 
   @override
   Future<NumberTriviaModel> getConcreteNumberTrivia(int number) =>
