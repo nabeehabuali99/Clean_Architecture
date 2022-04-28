@@ -13,7 +13,7 @@ class GetConcreteNumberTrivia
   GetConcreteNumberTrivia(this.repository);
 
   @override
-  Future<Either<Failure, NumberTrivia>> call(
+  Future<Either<Failure,NumberTrivia>> call(
       ParamsForGetConcreteNumberTrivia paramsForGetConcreteNumberTrivia) async {
     // TODO: implement call
     return await repository
