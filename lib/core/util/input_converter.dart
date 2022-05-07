@@ -2,15 +2,17 @@ import 'package:clean_architecture/core/error/failures.dart';
 import 'package:dartz/dartz.dart';
 
 class InputConverter {
-  Either<Failure,int> stringToUnsignedInteger(String str) {
+  Either<Failure, int> stringToUnsignedInteger(String str) {
     try {
       final integer = int.parse(str);
+
       if (integer < 0) {
         throw const FormatException();
       }
       return Right(integer);
     } on FormatException {
-      return const Left(InvalidInputFailure(properties: []));
+      return const Left(
+          InvalidInputFailure(properties: ['Invalid Input Failure']));
     }
   }
 }
@@ -21,5 +23,5 @@ class InvalidInputFailure extends Failure {
 
   @override
   // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 }
